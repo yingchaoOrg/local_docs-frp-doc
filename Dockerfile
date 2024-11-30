@@ -12,4 +12,4 @@ RUN npm install
 
 EXPOSE 80
 
-RUN hugo
+# RUN hugo
