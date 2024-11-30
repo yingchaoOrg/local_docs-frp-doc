@@ -10,7 +10,6 @@ RUN npm install
 WORKDIR /home/node/www
 
 
-# EXPOSE 80
+EXPOSE 80
 
-# CMD hugo server
-
+RUN hugo
