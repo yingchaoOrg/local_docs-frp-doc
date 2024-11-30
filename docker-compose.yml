@@ -1,0 +1,21 @@
+services:
+  builddocs:
+    build:
+      dockerfile: build/Dockerfile
+    image: ghcr.io/yingchaoorg/local_docs-frp-doc:master_build
+    privileged: false
+    container_name: local-docs-frp-docs-build
+    volumes:
+      - .:/home/node/www
+    tty: true
+  dev:
+    build:
+      dockerfile: Dockerfile
+    image: ghcr.io/yingchaoorg/local_docs-frp-doc:mastrt
+    privileged: false
+    container_name: local-docs-frp-docs
+    volumes:
+      - .:/home/node/www
+    tty: true
+    ports:
+      - 34812:80
