@@ -1,6 +1,6 @@
 ---
 title: "Web 界面"
-weight: 4
+weight: 40
 ---
 
 目前 frpc 和 frps 分别内置了相应的 Web 界面方便用户使用。
@@ -14,7 +14,8 @@ weight: 4
 需要在 frps.toml 中指定 dashboard 服务使用的端口，即可开启此功能：
 
 ```toml
-# frps.toml
+# 默认为 127.0.0.1，如果需要公网访问，需要修改为 0.0.0.0。
+webServer.addr = "0.0.0.0"
 webServer.port = 7500
 # dashboard 用户名密码，可选，默认为空
 webServer.user = "admin"

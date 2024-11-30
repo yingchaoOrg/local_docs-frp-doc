@@ -1,6 +1,6 @@
 ---
 title: "客户端"
-weight: 9
+weight: 90
 ---
 
 ## 动态配置更新
@@ -22,7 +22,7 @@ webServer.port = 7400
 
 ## 命令行查看代理状态
 
-frpc 支持通过 `frpc status -c ./frpc.ini` 命令查看代理的状态信息，此功能需要在 frpc 中启用 webServer。
+frpc 支持通过 `frpc status -c ./frpc.toml` 命令查看代理的状态信息，此功能需要在 frpc 中启用 webServer。
 
 ## 使用代理连接 frps
 

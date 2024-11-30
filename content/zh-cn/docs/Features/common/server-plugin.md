@@ -1,6 +1,6 @@
 ---
 title: "服务端插件"
-weight: 12
+weight: 120
 ---
 
 frp 服务端插件的作用是在不侵入自身代码的前提下，扩展 frp 服务端的能力。
@@ -61,7 +61,7 @@ Response
 
 ```
 {
-    "unchange": "false",
+    "unchange": false,
     "content": {
         ... // 替换后的操作信息，格式必须和请求时的一致
     }

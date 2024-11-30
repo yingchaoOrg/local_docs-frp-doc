@@ -11,6 +11,7 @@ description: >
 | :--- | :--- | :--- | :--- |
 | name | string | 代理名称。 | Yes |
 | type | string | 代理类型，可选值为 tcp, udp, http, https, tcpmux, stcp, sudp, xtcp。 | Yes |
+| annotations | map[string]string | 代理的注释信息，会被展示在 server 的 dashboard 中。 | No |
 | transport | [ProxyTransport](#proxytransport) | 代理网络层配置。 | No |
 | metadatas | map[string]string | 附加元数据，会传递给服务端插件，提供附加能力。 | No |
 | loadBalancer | [LoadBalancerConfig](#loadbalancerconfig) | 负载均衡配置。 | No |
@@ -51,6 +52,7 @@ description: >
 | maxFailed | int | 健康检查连续错误次数，连续检查错误多少次认为服务不健康，默认为 1。 | No |
 | intervalSeconds | int | 健康检查周期(秒)，每隔多长时间进行一次健康检查，默认为 10s。 | No |
 | path | string | 健康检查的 HTTP 接口，如果健康检查类型是 http，则需要配置此参数，指定发送 http 请求的 path，例如 `/health`。 | No |
+| httpHeaders | [[]HTTPHeader](../common#httpheader) | 健康检查的 HTTP 请求头，仅在健康检查类型是 http 时生效。 | No |
 
 ### DomainConfig
 
@@ -84,6 +86,7 @@ description: >
 | httpPassword | string | HTTP Basic Auth 密码。 | No |
 | hostHeaderRewrite | string | 替换 Host Header。 | No |
 | requestHeaders | [HeaderOperations](../common#headeroperations) | 对请求 Header 的操作配置。 | No |
+| responseHeaders | [HeaderOperations](../common#headeroperations) | 对响应 Header 的操作配置。 | No |
 | routeByHTTPUser | string | 根据 HTTP Basic Auth user 路由。 | No |
 
 ### HTTPSProxyConfig
