@@ -1,5 +1,7 @@
 # frp-doc
 
+[![Create and publish a Docker image](https://github.com/yingchaoOrg/local_docs-frp-doc/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yingchaoOrg/local_docs-frp-doc/actions/workflows/docker-image.yml)
+
 Documentation(https://gofrp.org) for frp.
 
 ```
